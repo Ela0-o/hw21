@@ -97,4 +97,4 @@ int main(int argc, char** argv) {
 
   cout << solve(bars);
   return 0;
-}OD
+}
