@@ -77,7 +77,7 @@ int main() {
   на матрицу поворота
   */
   vector<pair<double, double>> left, right;
-  for (int i = 0; i < size(dots()); ++i){
+  for (int i = 0; i < dots.size(); ++i){
     if ((cos(a)*dots[i].first - sin(a)*dots[i].second) < 0){
       left.push_back(dots[i]);
     }
@@ -95,13 +95,13 @@ int main() {
   pair<double, double> l_max = left[0];
   pair<double, double> r_max = left[0];
   double c = 0;
-  for (int i = 0; i < size(left()); ++i){
+  for (int i = 0; i < left.size(); ++i){
     c = cos_betw(left[i],{x,y});
     if (cos_betw(l_max,{x,y}) > c){
       l_max = left[i];
     }
   }
-  for (int i = 0; i < size(right()); ++i){
+  for (int i = 0; i < right.size(); ++i){
     c = cos_betw(right[i],{x,y});
     if (cos_betw(r_max,{x,y}) > c){
       r_max = right[i];
