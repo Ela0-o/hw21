@@ -76,7 +76,7 @@ int main() {
     vector<pair<double, double>> middle;
     vector<pair<double, double>> dots2;
     for (int i=0; i < dots.size(); ++i){
-        if (abs(pow((dots[i].first)*x + (dots[i].second)*y,2) - (pow(x,2) + pow(y,2))*(pow(dots[i].first,2) + pow(dots[i].second,2))) < 0.0000000001){
+        if (abs(pow((dots[i].first)*x + (dots[i].second)*y,2) - (pow(x,2) + pow(y,2))*(pow(dots[i].first,2) + pow(dots[i].second,2))) < 0.00000000000000000000000000000000000000000000000001){
             middle.push_back(dots[i]);
         }
         else{
