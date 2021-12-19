@@ -44,7 +44,6 @@ int main() {
         }
     }
     
-    if (leftmost)
     cout << endl << "Leftmost: " << left_max.first << " " << left_max.second;
     cout << endl << "Rightmost: " << right_max.first << " " << right_max.second;
 }
