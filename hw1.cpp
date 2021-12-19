@@ -33,8 +33,8 @@ int main() {
     }
     file.close();
   
-    pair<double, double> left_max = {x, y};
-    pair<double, double> right_max = {x, y};
+    pair<double, double> left_max = {0, 0};
+    pair<double, double> right_max = {0, 0};
     for (int i=0; i<dots.size(); i++){
         if ((x*dots[i].second > dots[i].first*y) and cos_betw(dots[i], {x, y}) <= cos_betw(left_max, {x,y})){
             left_max = dots[i];
@@ -43,7 +43,8 @@ int main() {
             right_max = dots[i];
         }
     }
-
+    
+    if (leftmost)
     cout << endl << "Leftmost: " << left_max.first << " " << left_max.second;
     cout << endl << "Rightmost: " << right_max.first << " " << right_max.second;
 }
