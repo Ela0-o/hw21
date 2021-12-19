@@ -31,7 +31,7 @@ int main(){
         file >> yn;
         if (1==1){
             if ((x*yn > xn*y) and cos_betw({xn, yn}, {x, y}) <= cos_betw(left_max, {x,y})){
-                left_max = {xn, yn}};
+                left_max = {xn, yn};
             }
             if ((x*yn <= xn*y) and cos_betw({xn, yn}, {x, y}) <= cos_betw(right_max, {x,y})){
                 right_max = {xn, yn};
