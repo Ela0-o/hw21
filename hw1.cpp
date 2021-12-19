@@ -44,6 +44,6 @@ int main() {
         }
     }
 
-    cout << endl << "Leftmost: " << l_max.first << " " << l_max.second;
-    cout << endl << "Rightmost: " << r_max.first << " " << r_max.second;
+    cout << endl << "Leftmost: " << left_max.first << " " << left_max.second;
+    cout << endl << "Rightmost: " << right_max.first << " " << right_max.second;
 }
