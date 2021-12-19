@@ -33,8 +33,8 @@ int main() {
     }
     file.close();
   
-    pair<double, double>left_max = {x, y};
-    pair<double, double>left_max = {x, y};
+    pair<double, double> left_max = {x, y};
+    pair<double, double> left_max = {x, y};
     for (i=0; i<dots.size(); i++){
         if ((x*dots[i].second > dots[i].first*y) and cos_betw(dots[i], {x, y}) < cos_betw(left_max, {x,y})){
             left_max = dots[i];
