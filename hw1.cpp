@@ -11,7 +11,11 @@ using namespace std;
 */
 float cos_betw(pair<double, double> a, pair<double, double> b)
 {
+    if (a.first==0 and a.second==0){
+        return 1
+    }else{
     return round(((a.first*b.first + a.second*b.second)/(pow((pow(a.first,2) + pow(a.second,2))*(pow(b.first,2) + pow(b.second,2)),0.5))) * 100000000000.0) / 100000000000.0;
+    }
 }
 
 int main() {
