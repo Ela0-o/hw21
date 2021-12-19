@@ -1,12 +1,11 @@
 #include <iostream>
 #include <cmath>
 #include <fstream>
-using namespace std;
 
 /*
 Считаем косинус угла между двумя векторами
 */
-float cos_betw(pair<double, double> a, pair<double, double> b)
+float cos_betw(std::pair<double, double> a, std::pair<double, double> b)
 {
     if (a.first==0 and a.second==0){
         return 1;
@@ -16,14 +15,14 @@ float cos_betw(pair<double, double> a, pair<double, double> b)
 }
 
 int main(){
-    ifstream file ("in.txt");
+    std::ifstream file ("in.txt");
     double x = 0;
     double y = 0;
     file >> x >> y;
     double xn = 0;
     double yn = 0;
-    pair<double, double> left_max = {0, 0};
-    pair<double, double> right_max = {0, 0};
+    std::pair<double, double> left_max = {0, 0};
+    std::pair<double, double> right_max = {0, 0};
     double c = 0;
     while (file >> xn){
         file >> yn;
@@ -39,6 +38,6 @@ int main(){
     }
     file.close();
     
-    cout << endl << "Leftmost: " << left_max.first << " " << left_max.second;
-    cout << endl << "Rightmost: " << right_max.first << " " << right_max.second;
+    std::cout << std::endl << "Leftmost: " << left_max.first << " " << left_max.second;
+    std::cout << std::endl << "Rightmost: " << right_max.first << " " << right_max.second;
 }
