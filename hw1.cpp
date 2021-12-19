@@ -26,14 +26,12 @@ int main(){
     double c = 0;
     while (file >> xn){
         file >> yn;
-        if (1==1){
-            c = cos_betw({xn, yn}, {x, y});
-            if ((x*yn > xn*y) and c <= cos_betw(left_max, {x,y})){
-                left_max = {xn, yn};
-            }
-            if ((x*yn <= xn*y) and c <= cos_betw(right_max, {x,y})){
-                right_max = {xn, yn};
-            }
+        c = cos_betw({xn, yn}, {x, y});
+        if ((x*yn > xn*y) and c <= cos_betw(left_max, {x,y})){
+            left_max = {xn, yn};
+        }
+        if ((x*yn <= xn*y) and c <= cos_betw(right_max, {x,y})){
+            right_max = {xn, yn};
         }
     }
     file.close();
