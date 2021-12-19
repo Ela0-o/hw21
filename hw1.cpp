@@ -27,13 +27,15 @@ int main(){
     double yn = 0;
     pair<double, double> left_max = {0, 0};
     pair<double, double> right_max = {0, 0};
+    double c = 0;
     while (file >> xn){
         file >> yn;
         if (1==1){
-            if ((x*yn > xn*y) and cos_betw({xn, yn}, {x, y}) <= cos_betw(left_max, {x,y})){
+            c = cos_betw({xn, yn}, {x, y});
+            if ((x*yn > xn*y) and c <= cos_betw(left_max, {x,y})){
                 left_max = {xn, yn};
             }
-            if ((x*yn <= xn*y) and cos_betw({xn, yn}, {x, y}) <= cos_betw(right_max, {x,y})){
+            if ((x*yn <= xn*y) and c <= cos_betw(right_max, {x,y})){
                 right_max = {xn, yn};
             }
         }
