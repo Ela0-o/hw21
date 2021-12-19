@@ -10,7 +10,7 @@ float cos_betw(std::pair<double, double> a, std::pair<double, double> b)
     if (a.first==0 and a.second==0){
         return 1;
     }else{
-    return round(((a.first*b.first + a.second*b.second)/(sqrt((a.first*a.first + a.second*a.second)*(b.first*b.first + b.second*b.second)) * 100000.0) / 100000.0;
+    return round(((a.first*b.first + a.second*b.second)/(sqrt((a.first*a.first + a.second*a.second)*(b.first*b.first + b.second*b.second))))*100000.0)/100000.0;
     }
 }
 
