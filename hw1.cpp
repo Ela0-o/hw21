@@ -18,35 +18,27 @@ float cos_betw(pair<double, double> a, pair<double, double> b)
     }
 }
 
-int main() {
-    /*
-    В этом блоке читаем данные из файла
-    */
+int main(){
     ifstream file ("in.txt");
     double x = 0;
     double y = 0;
     file >> x >> y;
-    vector<pair<double, double>> dots;
-    double c1 = 0;
-    double c2 = 0;
-    while (file >> c1){
-        file >> c2;
-        if (c1 != 0 or c2 !=0){
-            dots.push_back({c1,c2});
+    double xn = 0;
+    double yn = 0;
+    pair<double, double> left_max = {0, 0};
+    pair<double, double> right_max = {0, 0};
+    while (file >> xn){
+        file >> yn;
+        if (1==1){
+            if ((x*yn > xn*y) and cos_betw({xn, yn}, {x, y}) <= cos_betw(left_max, {x,y})){
+                left_max = {xn, yn}};
+            }
+            if ((x*yn <= xn*y) and cos_betw({xn, yn}, {x, y}) <= cos_betw(right_max, {x,y})){
+                right_max = {xn, yn};
+            }
         }
     }
     file.close();
-  
-    pair<double, double> left_max = {0, 0};
-    pair<double, double> right_max = {0, 0};
-    for (int i=0; i<dots.size(); i++){
-        if ((x*dots[i].second > dots[i].first*y) and cos_betw(dots[i], {x, y}) <= cos_betw(left_max, {x,y})){
-            left_max = dots[i];
-        }
-        if ((x*dots[i].second <= dots[i].first*y) and cos_betw(dots[i], {x, y}) <= cos_betw(right_max, {x,y})){
-            right_max = dots[i];
-        }
-    }
     
     cout << endl << "Leftmost: " << left_max.first << " " << left_max.second;
     cout << endl << "Rightmost: " << right_max.first << " " << right_max.second;
