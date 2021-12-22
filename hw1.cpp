@@ -21,8 +21,8 @@ int main(){
     file >> x >> y;
     double xn = 0;
     double yn = 0;
-    pair<double,double> left_max = {0, 0};
-    pair<double,double> right_max = {0, 0};
+    std::pair<double,double> left_max = {0, 0};
+    std::pair<double,double> right_max = {0, 0};
     double c = 0;
     while (file >> xn){
         file >> yn;
